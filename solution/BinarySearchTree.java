@@ -1,21 +1,13 @@
 class BinarySearchTree {
 
-    static TreeNode search(TreeNode node, int value) {
-        
-        TreeNode result;
-        if (node == null) {
-            return null;
+    static TreeNode search(TreeNode node, int n) {
+        if (node == null || node.getValue() == n ) {
+            return node;        
         }
-        int key = node.getValue();
-        if (key == value) {
-            return node;
-        } else if (key > value) {
-            result = search(node.getLeft(), value);
-        } else {
-            result = search(node.getRight(), value);
+        if (node.getValue() > n) {
+            return search(node.getLeft(), n);        
         }
-
-        return result;
+        return search(node.getRight(), n);    
     }
 
     /**

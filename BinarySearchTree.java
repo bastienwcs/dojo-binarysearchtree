@@ -1,9 +1,9 @@
 class BinarySearchTree {
 
-    static TreeNode search(TreeNode node, int value) {
-        
+    // on cherche n
+    static TreeNode search(TreeNode node, int n) {
         // TODO : implementation
-        
+ 
     }
 
     /**
